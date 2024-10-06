@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sakshi's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(1, 17, 49);
+        color: aliceblue;
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(51, 61, 80);
+        padding: 0 40px;
+      }
+
+      nav div {
+        font-size: 2rem;
+        font-weight: bold;
+        color: aliceblue;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: rgb(28, 213, 227);
+      }
+
+      section {
+        min-height: 100vh;
+        padding: 80px 40px;
+      }
+
+      /* Section 1: Home */
+      .home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .home-left {
+        max-width: 50%;
+        margin-left: 40px;
+      }
+
+      .home-left h1 {
+        font-size: 3rem;
+        color: rgb(226, 37, 135);
+      }
+
+      .home-left p {
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+
+      .home-right {
+        margin-right: 40px;
+      }
+
+      .home-right img {
+        width: 400px;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* Section 2: About */
+      .about {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .about-text {
+        max-width: 50%;
+      }
+
+      .about-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .about-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .about img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Skills Section */
+      .skills {
+        margin-top: 40px;
+      }
+
+      .skills h3 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .skills-list span {
+        padding: 10px 15px;
+        background-color: rgb(51, 61, 80);
+        border-radius: 20px;
+        border: 1px solid aliceblue;
+        font-size: 1rem;
+      }
+
+      /* Section 3: Contact */
+      .contact {
+        text-align: center;
+      }
+
+      .contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+      }
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 80px; /* Increased the gap */
+        margin-bottom: 40px; /* Added margin-bottom */
+      }
+
+      .contact-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-links img {
+        width: 40px;
+        margin-bottom: 10px;
+      }
+
+      .contact-links a {
+        color: aliceblue;
+        font-size: 1.5rem;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid aliceblue;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .contact-links a:hover {
+        color: rgb(28, 213, 227);
+        border-color: rgb(28, 213, 227);
+      }
+
+      footer {
+        background-color: rgb(51, 61, 80);
+        padding: 20px;
+        text-align: center;
+        color: rgb(150, 150, 150);
+      }
+
+      /* Section divider lines */
+      section + section {
+        border-top: 1px solid aliceblue;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .home {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .about {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .home-left {
+          margin-left: 0;
+        }
+
+        .home-right {
+          margin-right: 0;
+        }
+
+        .contact-links {
+          gap: 40px; /* Adjusted for smaller screens */
+        }
+        #contact{
+          min-height: 75vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div>Sakshi's Portfolio</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section 1: Home -->
+    <section id="home" class="home">
+      <div class="home-left">
+        <h1>Hello, I'm <span class="purple">Sakshi</span></h1>
+        <p>Web Developer & Designer</p>
+        <p>Specializing in creating beautiful and functional websites</p>
+        <span id="element"></span>
+      </div>
+      <div class="home-right">
+        <img src="images/devep.png" alt="Web Developer Animation" />
+      </div>
+    </section>
+
+    <!-- Section 2: About -->
+    <section id="about" class="about">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate web developer with expertise in HTML, CSS,
+          JavaScript, Bootstrap, and SQL. I enjoy creating websites that are not
+          only visually appealing but also highly functional and user-friendly.
+        </p>
+        <p>
+          I am always eager to learn new technologies and continuously improve
+          my skills to deliver better web experiences.
+        </p>
+
+        <!-- Skills Section -->
+        <div class="skills">
+          <h3>Skills</h3>
+          <div class="skills-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Bootstrap</span>
+            <span>Git</span>
+            <span>SQL</span>
+            <span>Java</span>
+            <span>C</span>
+            <span>C++</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="images/my_img.jpeg" alt="Sakshi's Image" />
+      </div>
+    </section>
+
+    <!-- Section 3: Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-links">
+        <div class="contact-link">
+          <img src="images/gitimg.png" alt="GitHub Icon" />
+          <a href="https://github.com/Sakshikadam1112" target="_blank">GitHub</a>
+        </div>
+        <div class="contact-link">
+          <img src="images/linkedinimg.jpeg" alt="LinkedIn Icon" />
+          <a
+            href="https://www.linkedin.com/in/sakshi-kadam-827292258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="contact-link">
+          <img src="images/emailimg.jpeg" alt="Email Icon" />
+          <a href="mailto:sakshikadam01052004@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Sakshi's Portfolio. All Rights Reserved.</p>
+    </footer>
+
